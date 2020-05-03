@@ -13,11 +13,12 @@
     </ul>
   </div>
 <% end %>
+
 <label>Song Title:</label>
 <%= f.text_field :title, @song.title %>
 
 <label>Released:</label>
-<%= f.text_field :released, @song.released%>
+<%= f.check_box :released, @song.released%>
 
 <label>Release Year:</label>
 <%= f.text_field :release_year, @song.release_year%>

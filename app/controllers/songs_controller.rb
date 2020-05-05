@@ -4,12 +4,12 @@ class SongsController < ApplicationController
         @songs = Song.all 
     end
 
-    def show
-        find_song
-    end
-
     def new
         @song = Song.new 
+    end
+    
+    def show
+        find_song
     end
 
     def edit
@@ -33,11 +33,17 @@ class SongsController < ApplicationController
             render :edit
         end
     end
+    
+    def destroy
+        find_song
+        @song.destroy
+        redirect_to songs_path 
+    end
 
     private 
 
     def song_params
-        params.require(:song).permit(:title, :release_year, :artist_name, :genre)
+        params.require(:song).permit(:title, :release_year, :artist_name, :genre, :released)
     end
 
     def find_song

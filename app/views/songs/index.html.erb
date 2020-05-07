@@ -12,7 +12,10 @@
     </thead>
     <tbody>
     <tr>
+    <div class="song">
         <td><%=song.title%></td>
+         <%= link_to "Delete", song, method: :delete, data: { confirm: "Really?" } %>
+    </div>
         <td><%=song.released%></td>
         <td><%=song.release_year%></td>
         <td><%=song.artist_name%></td>
@@ -21,3 +24,4 @@
     </tbody>
     </table>
 <% end %>
+

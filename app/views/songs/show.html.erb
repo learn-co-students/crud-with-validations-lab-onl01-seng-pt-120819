@@ -1,0 +1,8 @@
+<div class="div" style="display:flex; flex-direction:column;">
+<p>Song title: <%= @song.title %></p>
+<p>Released yet? :  <%= @song.released ? "Yes" : "no"%></p>
+<p>Release year: <%= @song.release_year %></p>
+<p>Artist name: <%= @song.artist_name %></p>
+<p>Song genre: <%= @song.genre %></p>
+<%= link_to "Back", songs_path %>
+</div>

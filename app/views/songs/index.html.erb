@@ -1,0 +1,12 @@
+<h3>All the songs</h3>
+<tbody >
+<tr>
+<% @songs.each do |s| %>
+
+  <td><%= link_to s.title, song_path(s) %>
+  <%= link_to "Delete", s, method: :delete, data: { confirm: "Really?" } %>
+  </td>  
+
+<% end %>
+  <tr>
+</tbody>

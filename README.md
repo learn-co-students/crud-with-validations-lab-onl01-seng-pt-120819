@@ -11,7 +11,7 @@ Songs have the following attributes and limitations:
   - Must not be blank
   - Cannot be repeated by the same artist in the same year
 - `released`, a `boolean` describing whether the song was ever officially
-  released.
+  released
   - Must be `true` or `false`
 - `release_year`, an `integer`
   - Optional if `released` is `false`
@@ -25,9 +25,9 @@ Songs have the following attributes and limitations:
 
 Use the `resource` generator, **not** the `scaffold` generator
 
-1.  Define a model with validations for `Song`
+1.  Define a model with validations for `Song`.
 
-2.  Define all RESTful routes for songs
+2.  Define all RESTful routes for songs.
 
 3.  Render the list of songs in an HTML table.
 
@@ -43,8 +43,6 @@ Use the `resource` generator, **not** the `scaffold` generator
 7.  Use strong parameters in your POST/PATCH controller actions.
 
 8.  Set the root route to the song index.
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/crud-with-validations-lab' title='CRUD With Validations Lab'>CRUD With Validations Lab</a> on Learn.co and start learning to code for free.</p>
 
 [link_to]: http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html#method-i-link_to
 [assets]: http://apidock.com/rails/v4.2.1/ActionView/Helpers/AssetTagHelper/javascript_include_tag
